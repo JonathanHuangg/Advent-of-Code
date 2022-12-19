@@ -46,7 +46,7 @@ for x in range(0, len(lines), 3):
     totalPoints += givePrio(resultList[0])
 
 
-print("Part 2: " + totalPoints)
+print("Part 2: " + str(totalPoints))
 
 #Topics Covered: searching in O(n^2), sets and lists
 
