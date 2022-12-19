@@ -60,5 +60,7 @@ for Line in lines:
         totalPoints += (winnings[index] + 6)
 print(totalPoints)
 
+#Ideas Covered: Ascii numbers with logic, dictionaries
+
     
         
