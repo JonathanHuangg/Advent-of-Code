@@ -29,11 +29,36 @@ for Line in lines:
         totalPoints += (6 + compareRest(Line[2]))
     else:
         totalPoints += (compareRest(Line[2]))
-print("Part 1: " + totalPoints)
+print("Part 1: " + str(totalPoints))
 
 #Part 2
 #Lose     Draw       Win
 # X        Y          Z
 totalPoints = 0
+theirMove = {
+    "A": 0,
+    "B": 1,
+    "C": 2
+}
+yourMove = {
+    "X": -1,
+    "Y": 0,
+    "Z": 1
+}
+winnings = [1, 2, 3]
+
 for Line in lines:
+    Line = Line.strip()
+    if Line[2] == "X":
+        totalPoints += winnings[theirMove[Line[0]] + yourMove["X"]]
+    elif Line[2] == "Y":
+        totalPoints += (winnings[theirMove[Line[0]] + yourMove["Y"]] + 3)
+    else:
+        index = theirMove[Line[0]] + yourMove["Z"]
+        if (index == 3):
+            index = 0
+        totalPoints += (winnings[index] + 6)
+print(totalPoints)
+
     
+        
