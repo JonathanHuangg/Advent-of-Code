@@ -27,7 +27,7 @@ totals.sort()
 
 print("Part 2 Max: " + str(totals[-1] + totals[-2] + totals[-3]))
 
-
+#Topics Covered: Indexing, file reader
 
 
 
